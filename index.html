@@ -44,6 +44,17 @@
       .btn-accents:hover {
         background: #dd2f32;
       }
+      .btn-close {
+        border: 1px solid #dd2f32 !important;
+        color: #dd2f32;
+        outline: 0;
+        background-color: transparent;
+        outline-width: 0 !important;
+        outline-offset: 0 !important;
+      }
+      .btn-close:hover {
+        background-color: transparent;
+      }
 
       .banner-overly {
         background: linear-gradient(
@@ -214,7 +225,314 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <!-- Deal of the day -->
+      <section id="deal" class="py-20">
+        <div class="container mx-auto">
+          <!-- Deal Heading -->
+          <div class="flex justify-between mb-10">
+            <div class="left w-6/12">
+              <h1 class="text-4xl font-bold">Deal of the day</h1>
+              <p class="text-sm mt-5">
+                Contrary to popular belief, is not simply random text. It has
+                roots in a piece of classical Latin literature from 45 BC,
+                making it over 2000 years old.
+              </p>
+            </div>
+            <div class="right">
+              <div
+                class="grid grid-flow-col gap-5 text-center auto-cols-max items-start"
+              >
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value: 15"></span>
+                  </span>
+                  Days
+                </div>
+                <span class="text-5xl">:</span>
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value: 10"></span>
+                  </span>
+                  Hours
+                </div>
+                <span class="text-5xl">:</span>
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value: 24"></span>
+                  </span>
+                  Minutes
+                </div>
+                <span class="text-5xl">:</span>
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-5xl">
+                    <span style="--value: 35"></span>
+                  </span>
+                  Seconds
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-4 gap-3 mb-10">
+            <!-- Deal cards -->
+            <div class="cards">
+              <div class="card w-full bg-base-100 border border-slate-200">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./images/fruit6.png"
+                    alt="Shoes"
+                    class="rounded-xl"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">12.90$ - 18.85$</h2>
+                  <div class="border mt-6 mb-6 w-10/12 border-slate-200"></div>
+                  <p>Apples</p>
+                  <div class="icons flex text-[#F85559] gap-2 mt-4 mb-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <div class="card-actions">
+                    <a
+                      class="text-[#F85559] font-bold cursor-pointer"
+                      onclick="my_modal_1.showModal()"
+                      >Details</a
+                    >
+                    <dialog id="my_modal_1" class="modal">
+                      <form method="dialog" class="modal-box">
+                        <figure class="px-10 pt-10">
+                          <img
+                            src="./images/fruit6.png"
+                            alt="Shoes"
+                            class="rounded-xl w-32"
+                          />
+                        </figure>
+                        <h3 class="font-bold text-lg font-sans mt-4">Apples</h3>
+                        <p class="py-4 w-8/12 mx-auto text-sm">
+                          Professional employees are there for you to pick the
+                          most amazing and fresh fruits.
+                        </p>
+                        <div
+                          class="icons flex justify-center text-[#F85559] gap-2 mt-4 mb-4"
+                        >
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="modal-action flex gap-5 justify-center">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn btn-close">Close</button>
+                          <button class="btn border-0 btn-accents text-white">
+                            Buy Now
+                          </button>
+                        </div>
+                      </form>
+                    </dialog>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Deal cards -->
+            <div class="cards">
+              <div class="card w-full bg-base-100 border border-slate-200">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./images/fruit6.png"
+                    alt="Shoes"
+                    class="rounded-xl"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">12.90$ - 18.85$</h2>
+                  <div class="border mt-6 mb-6 w-10/12 border-slate-200"></div>
+                  <p>Apples</p>
+                  <div class="icons flex text-[#F85559] gap-2 mt-4 mb-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <div class="card-actions">
+                    <a
+                      class="text-[#F85559] font-bold cursor-pointer"
+                      onclick="my_modal_2.showModal()"
+                      >Details</a
+                    >
+                    <dialog id="my_modal_2" class="modal">
+                      <form method="dialog" class="modal-box">
+                        <figure class="px-10 pt-10">
+                          <img
+                            src="./images/fruit6.png"
+                            alt="Shoes"
+                            class="rounded-xl w-32"
+                          />
+                        </figure>
+                        <h3 class="font-bold text-lg font-sans mt-4">Apples</h3>
+                        <p class="py-4 w-8/12 mx-auto text-sm">
+                          Professional employees are there for you to pick the
+                          most amazing and fresh fruits.
+                        </p>
+                        <div
+                          class="icons flex justify-center text-[#F85559] gap-2 mt-4 mb-4"
+                        >
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="modal-action flex gap-5 justify-center">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn btn-close">Close</button>
+                          <button class="btn border-0 btn-accents text-white">
+                            Buy Now
+                          </button>
+                        </div>
+                      </form>
+                    </dialog>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Deal cards -->
+            <div class="cards">
+              <div class="card w-full bg-base-100 border border-slate-200">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./images/fruit6.png"
+                    alt="Shoes"
+                    class="rounded-xl"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">12.90$ - 18.85$</h2>
+                  <div class="border mt-6 mb-6 w-10/12 border-slate-200"></div>
+                  <p>Apples</p>
+                  <div class="icons flex text-[#F85559] gap-2 mt-4 mb-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <div class="card-actions">
+                    <a
+                      class="text-[#F85559] font-bold cursor-pointer"
+                      onclick="my_modal_3.showModal()"
+                      >Details</a
+                    >
+                    <dialog id="my_modal_3" class="modal">
+                      <form method="dialog" class="modal-box">
+                        <figure class="px-10 pt-10">
+                          <img
+                            src="./images/fruit6.png"
+                            alt="Shoes"
+                            class="rounded-xl w-32"
+                          />
+                        </figure>
+                        <h3 class="font-bold text-lg font-sans mt-4">Apples</h3>
+                        <p class="py-4 w-8/12 mx-auto text-sm">
+                          Professional employees are there for you to pick the
+                          most amazing and fresh fruits.
+                        </p>
+                        <div
+                          class="icons flex justify-center text-[#F85559] gap-2 mt-4 mb-4"
+                        >
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="modal-action flex gap-5 justify-center">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn btn-close">Close</button>
+                          <button class="btn border-0 btn-accents text-white">
+                            Buy Now
+                          </button>
+                        </div>
+                      </form>
+                    </dialog>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Deal cards -->
+            <div class="cards">
+              <div class="card w-full bg-base-100 border border-slate-200">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./images/fruit6.png"
+                    alt="Shoes"
+                    class="rounded-xl"
+                  />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">12.90$ - 18.85$</h2>
+                  <div class="border mt-6 mb-6 w-10/12 border-slate-200"></div>
+                  <p>Apples</p>
+                  <div class="icons flex text-[#F85559] gap-2 mt-4 mb-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <div class="card-actions">
+                    <a
+                      class="text-[#F85559] font-bold cursor-pointer"
+                      onclick="my_modal_4.showModal()"
+                      >Details</a
+                    >
+                    <dialog id="my_modal_4" class="modal">
+                      <form method="dialog" class="modal-box">
+                        <figure class="px-10 pt-10">
+                          <img
+                            src="./images/fruit6.png"
+                            alt="Shoes"
+                            class="rounded-xl w-32"
+                          />
+                        </figure>
+                        <h3 class="font-bold text-lg font-sans mt-4">Apples</h3>
+                        <p class="py-4 w-8/12 mx-auto text-sm">
+                          Professional employees are there for you to pick the
+                          most amazing and fresh fruits.
+                        </p>
+                        <div
+                          class="icons flex justify-center text-[#F85559] gap-2 mt-4 mb-4"
+                        >
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="modal-action flex gap-5 justify-center">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn btn-close">Close</button>
+                          <button class="btn border-0 btn-accents text-white">
+                            Buy Now
+                          </button>
+                        </div>
+                      </form>
+                    </dialog>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start justify-center">
+            <button class="btn btn-accents text-white">Show More</button>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>

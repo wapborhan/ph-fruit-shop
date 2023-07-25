@@ -1,15 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Shop Brust</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/4e3bd9b7a2.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-
-<body>
-
-</body>
-
+  <body>
+    <header>
+      <div class="container mx-auto">
+        <div class="navbar bg-[#F85559] rounded-full my-10 p-3">
+          <div class="navbar-start">
+            <ul class="menu menu-horizontal text-md px-1 text-white font-bold">
+              <li><a class="#">Home</a></li>
+              <li><a class="#">About Us</a></li>
+              <li><a class="#">Shop</a></li>
+              <li><a class="#">All Fruit</a></li>
+            </ul>
+          </div>
+          <div class="navbar-center">
+            <a href="#" class="flex items-center">
+              <img src="./assets/images/logo.png" alt="Logo" class="w-3/12" />
+              <span class="text-white ms-4 text-2xl font-bold"
+                >Fruit Burst</span
+              >
+            </a>
+          </div>
+          <div class="navbar-end">
+            <div class="form-control relative">
+              <input
+                type="text"
+                placeholder="Search Here"
+                class="input input-bordered rounded-full w-24 md:w-auto"
+              />
+              <div class="icon absolute right-4 top-3">
+                <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
 </html>

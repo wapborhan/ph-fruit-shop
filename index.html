@@ -32,10 +32,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <style>
+      body {
+        font-family: lato;
+      }
+
+      .btn-accents {
+        background: #f85559;
+      }
+
+      .btn-accents:hover {
+        background: #dd2f32;
+      }
+
+      .banner-overly {
+        background: linear-gradient(
+          180deg,
+          #121212 0%,
+          rgba(18, 18, 18, 0) 100%
+        );
+        border-radius: 0.375rem;
+      }
+    </style>
   </head>
 
   <body>
     <header>
+      <!-- navbar -->
       <div class="container mx-auto">
         <div class="navbar bg-[#F85559] rounded-full my-10 p-3">
           <div class="navbar-start">
@@ -63,6 +86,128 @@
               />
               <div class="icon absolute right-4 top-3">
                 <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="container mx-auto">
+          <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+              <div
+                class="hero rounded-md"
+                style="background-image: url(./assets/images/banner1.png)"
+              >
+                <div class="hero-overlay banner-overly"></div>
+                <div
+                  class="hero-content p-0 pt-20 pb-40 text-center text-neutral-content text-white"
+                >
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">
+                      Exotic tastes at your doorstep
+                    </h1>
+                    <p class="mb-5">
+                      We supply highly quality organic products
+                    </p>
+                    <button class="btn btn-accents border-0 text-white">
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide4" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+              <div
+                class="hero rounded-md"
+                style="background-image: url(./assets/images/banner2.png)"
+              >
+                <div class="hero-overlay banner-overly"></div>
+                <div
+                  class="hero-content p-0 pt-20 pb-40 text-center text-neutral-content text-white"
+                >
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">
+                      Exotic tastes at your doorstep
+                    </h1>
+                    <p class="mb-5">
+                      We supply highly quality organic products
+                    </p>
+                    <button class="btn btn-accents border-0 text-white">
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide1" class="btn btn-circle">❮</a>
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+              <div
+                class="hero rounded-md"
+                style="background-image: url(./assets/images/banner3.png)"
+              >
+                <div class="hero-overlay banner-overly"></div>
+                <div
+                  class="hero-content p-0 pt-20 pb-40 text-center text-neutral-content text-white"
+                >
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">
+                      Exotic tastes at your doorstep
+                    </h1>
+                    <p class="mb-5">
+                      We supply highly quality organic products
+                    </p>
+                    <button class="btn btn-accents border-0 text-white">
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide2" class="btn btn-circle">❮</a>
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+              <div
+                class="hero rounded-md"
+                style="background-image: url(./assets/images/banner4.png)"
+              >
+                <div class="hero-overlay banner-overly"></div>
+                <div
+                  class="hero-content p-0 pt-20 pb-40 text-center text-neutral-content text-white"
+                >
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">
+                      Exotic tastes at your doorstep
+                    </h1>
+                    <p class="mb-5">
+                      We supply highly quality organic products
+                    </p>
+                    <button class="btn btn-accents border-0 text-white">
+                      Shop Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+              >
+                <a href="#slide3" class="btn btn-circle">❮</a>
+                <a href="#slide1" class="btn btn-circle">❯</a>
               </div>
             </div>
           </div>

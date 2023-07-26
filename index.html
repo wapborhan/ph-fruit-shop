@@ -78,14 +78,29 @@
       .why-right {
         grid-area: right;
       }
+      @media (max-width: 576px) {
+        .why-card {
+          display: grid;
+          grid-template-areas: "center" "left" "right";
+          gap: 30px;
+        }
+      }
+      @media (max-width: 425px) {
+        .why-card {
+          display: grid;
+          grid-template-areas: "center" "left" "right";
+          gap: 30px;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <header>
+    <header class="mx-4 lg:m-0">
       <!-- navbar -->
       <div class="container mx-auto">
-        <div class="navbar bg-[#F85559] rounded-full my-10 p-3">
+        <!-- desktop meni -->
+        <div class="navbar bg-[#F85559] rounded-full my-10 p-3 lg:flex hidden">
           <div class="navbar-start">
             <ul class="menu menu-horizontal text-md px-1 text-white font-bold">
               <li><a class="#">Home</a></li>
@@ -115,7 +130,22 @@
             </div>
           </div>
         </div>
+        <!-- Mobile menu -->
+        <div class="lg:hidden flex justify-between my-10 p-3">
+          <div class="navbar-left">
+            <a href="#" class="flex items-center">
+              <img src="./images/logo.png" alt="Logo" class="w-3/12" />
+              <span class="text-gray-900 ms-4 text-2xl font-bold"
+                >Fruit Burst</span
+              >
+            </a>
+          </div>
+          <div class="navbar-right flex items-center">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+          </div>
+        </div>
       </div>
+      <!-- carousel -->
       <div class="banner relative">
         <div class="container mx-auto">
           <div class="carousel w-full">
@@ -126,10 +156,10 @@
               >
                 <div class="hero-overlay banner-overly"></div>
                 <div
-                  class="hero-content p-0 pt-20 pb-40 text-center text-neutral-content text-white"
+                  class="hero-content p-0 lg:pt-20 pt-5 lg:pb-40 pb-5 text-center text-neutral-content text-white"
                 >
                   <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">
+                    <h1 class="mb-5 lg:text-5xl text-3xl font-bold">
                       Exotic tastes at your doorstep
                     </h1>
                     <p class="mb-5">
@@ -237,7 +267,9 @@
             </div>
           </div>
         </div>
-        <div class="categories inset-x-48 -bottom-20 absolute w-8/12 mx-auto">
+        <div
+          class="categories lg:block hidden inset-x-48 -bottom-20 absolute w-8/12 mx-auto"
+        >
           <div
             class="bg-white border p-6 justify-center items-center rounded-lg grid grid-cols-1 lg:grid-cols-5 md:grid-cols-3"
           >
@@ -294,13 +326,15 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="mx-4 lg:m-0">
       <!-- Deal of the day -->
-      <section id="deal" class="py-20 mt-20">
+      <section id="deal" class="lg:py-20 lg:mt-20 py-5 mt-5">
         <div class="container mx-auto">
           <!-- Deal Heading -->
-          <div class="flex justify-between mb-10">
-            <div class="left w-6/12">
+          <div
+            class="flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between mb-10"
+          >
+            <div class="left lg:w-6/12 w-12/12 lg:text-left text-center">
               <h1 class="text-4xl font-bold">Deal of the day</h1>
               <p class="text-sm mt-5">
                 Contrary to popular belief, is not simply random text. It has
@@ -310,7 +344,7 @@
             </div>
             <div class="right">
               <div
-                class="grid grid-flow-col gap-5 text-center auto-cols-max items-start"
+                class="grid grid-flow-col gap-3 text-center auto-cols-max items-start"
               >
                 <div class="flex flex-col">
                   <span class="countdown font-mono text-5xl">
@@ -342,7 +376,7 @@
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-4 gap-3 mb-10">
+          <div class="grid lg:grid-cols-4 grid-cols-1 gap-3 mb-10">
             <!-- Deal cards -->
             <div class="cards">
               <div class="card w-full bg-base-100 border border-slate-200">
@@ -619,7 +653,7 @@
                     BC, making it over 2000 years old.
                   </p>
                 </div>
-                <div class="flex">
+                <div class="grid lg:grid-cols-4 grid-cols-1">
                   <!-- Team card -->
                   <div class="card">
                     <figure class="px-10 pt-10">
@@ -705,7 +739,7 @@
       <!-- why choose us -->
       <section id="why" class="mb-10">
         <div class="container mx-auto">
-          <div class="text-center mx-auto items-center w-6/12 mb-20">
+          <div class="text-center mx-auto items-center lg:w-6/12 w-8-12 mb-20">
             <h2 class="text-3xl font-bold">Why Choose Us</h2>
             <p class="text-sm text-gray-600">
               Contrary to popular belief, is not simply random text. It has
@@ -718,14 +752,16 @@
               <!-- card -->
               <div class="hero">
                 <div
-                  class="hero-content items-start gap-5 flex-col lg:flex-row"
+                  class="hero-content lg:items-start items-center gap-5 flex-col lg:flex-row"
                 >
                   <div class="icon bg-gray-300 p-4 rounded-full">
                     <i class="fa-solid fa-users"></i>
                   </div>
-                  <div>
+                  <div class="lg:text-left text-center">
                     <h1 class="text-2xl font-bold">Dedicated Team</h1>
-                    <div class="border mt-2 w-4/12 border-gray-300"></div>
+                    <div
+                      class="border mx-auto lg:mr-auto mt-2 w-4/12 border-gray-300"
+                    ></div>
                     <p class="py-2 text-sm">
                       Professional employees are there for you to pick the most
                       amazing and fresh fruits.
@@ -736,14 +772,16 @@
               <!-- card -->
               <div class="hero">
                 <div
-                  class="hero-content items-start gap-5 flex-col lg:flex-row"
+                  class="hero-content lg:items-start items-center gap-5 flex-col lg:flex-row"
                 >
                   <div class="icon bg-gray-300 p-4 rounded-full">
                     <i class="fa-solid fa-users"></i>
                   </div>
-                  <div>
-                    <h1 class="text-2xl font-bold">Fresh is Best</h1>
-                    <div class="border mt-2 w-4/12 border-gray-300"></div>
+                  <div class="lg:text-left text-center">
+                    <h1 class="text-2xl font-bold">Dedicated Team</h1>
+                    <div
+                      class="border mx-auto lg:mr-auto mt-2 w-4/12 border-gray-300"
+                    ></div>
                     <p class="py-2 text-sm">
                       Professional employees are there for you to pick the most
                       amazing and fresh fruits.
@@ -754,14 +792,16 @@
               <!-- card -->
               <div class="hero">
                 <div
-                  class="hero-content items-start gap-5 flex-col lg:flex-row"
+                  class="hero-content lg:items-start items-center gap-5 flex-col lg:flex-row"
                 >
                   <div class="icon bg-gray-300 p-4 rounded-full">
                     <i class="fa-solid fa-users"></i>
                   </div>
-                  <div>
-                    <h1 class="text-2xl font-bold">Gift Certificates</h1>
-                    <div class="border mt-2 w-4/12 border-gray-300"></div>
+                  <div class="lg:text-left text-center">
+                    <h1 class="text-2xl font-bold">Dedicated Team</h1>
+                    <div
+                      class="border mx-auto lg:mr-auto mt-2 w-4/12 border-gray-300"
+                    ></div>
                     <p class="py-2 text-sm">
                       Professional employees are there for you to pick the most
                       amazing and fresh fruits.
@@ -778,14 +818,16 @@
             <div class="why-right">
               <!-- card -->
               <div class="hero">
-                <div class="hero-content items-start gap-5 lg:flex-row-reverse">
+                <div
+                  class="hero-content lg:items-start items-center gap-5 lg:flex-row-reverse flex-col"
+                >
                   <div class="icon bg-gray-300 p-4 rounded-full">
                     <i class="fa-solid fa-users"></i>
                   </div>
-                  <div class="text-right">
+                  <div class="lg:text-right text-center">
                     <h1 class="text-2xl font-bold">Integrated Supplier</h1>
                     <div
-                      class="border ms-auto mt-2 w-4/12 border-gray-300"
+                      class="border ml-auto mx-auto lg:mx-0 mt-2 w-4/12 border-gray-300"
                     ></div>
                     <p class="py-2 text-sm">
                       Professional employees are there for you to pick the most
@@ -796,14 +838,16 @@
               </div>
               <!-- card -->
               <div class="hero">
-                <div class="hero-content items-start gap-5 lg:flex-row-reverse">
+                <div
+                  class="hero-content lg:items-start items-center gap-5 lg:flex-row-reverse flex-col"
+                >
                   <div class="icon bg-gray-300 p-4 rounded-full">
                     <i class="fa-solid fa-users"></i>
                   </div>
-                  <div class="text-right">
+                  <div class="lg:text-right text-center">
                     <h1 class="text-2xl font-bold">Integrated Supplier</h1>
                     <div
-                      class="border ms-auto mt-2 w-4/12 border-gray-300"
+                      class="border ml-auto mx-auto lg:mx-0 mt-2 w-4/12 border-gray-300"
                     ></div>
                     <p class="py-2 text-sm">
                       Professional employees are there for you to pick the most
@@ -814,14 +858,16 @@
               </div>
               <!-- card -->
               <div class="hero">
-                <div class="hero-content items-start gap-5 lg:flex-row-reverse">
+                <div
+                  class="hero-content lg:items-start items-center gap-5 lg:flex-row-reverse flex-col"
+                >
                   <div class="icon bg-gray-300 p-4 rounded-full">
                     <i class="fa-solid fa-users"></i>
                   </div>
-                  <div class="text-right">
+                  <div class="lg:text-right text-center">
                     <h1 class="text-2xl font-bold">Integrated Supplier</h1>
                     <div
-                      class="border ms-auto mt-2 w-4/12 border-gray-300"
+                      class="border ml-auto mx-auto lg:mx-0 mt-2 w-4/12 border-gray-300"
                     ></div>
                     <p class="py-2 text-sm">
                       Professional employees are there for you to pick the most
@@ -835,7 +881,9 @@
         </div>
       </section>
     </main>
-    <footer class="footer footer-center p-10 bg-gray-950 text-primary-content">
+    <footer
+      class="footer footer-center lg:p-10 p-5 bg-gray-950 text-primary-content"
+    >
       <div>
         <a href="#" class="flex items-center">
           <img src="./images/logo.png" alt="Logo" class="w-3/12" />
@@ -855,43 +903,13 @@
         </ul>
       </div>
       <div>
-        <div class="grid grid-flow-col gap-4">
-          <a
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              class="fill-current"
-            >
-              <path
-                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
-              ></path></svg
-          ></a>
-          <a
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              class="fill-current"
-            >
-              <path
-                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
-              ></path></svg
-          ></a>
-          <a
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              class="fill-current"
-            >
-              <path
-                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-              ></path></svg
-          ></a>
+        <div class="grid lg:grid-cols-6 lg:text-4xl text-3xl grid-cols-6 gap-4">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i> </a>
+          <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-square-github"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
         </div>
       </div>
     </footer>

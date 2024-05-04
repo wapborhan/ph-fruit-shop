@@ -1,0 +1,75 @@
+body {
+  font-family: lato;
+}
+
+.btn-accents {
+  background: #f85559 !important;
+}
+
+.btn-accents:hover {
+  background: #dd2f32 !important;
+}
+
+.btn-close {
+  border: 1px solid #dd2f32 !important;
+  color: #dd2f32;
+  outline: 0;
+  background-color: transparent;
+  outline-width: 0 !important;
+  outline-offset: 0 !important;
+}
+
+.btn-close:hover {
+  background-color: transparent;
+}
+
+.banner-overly {
+  background: linear-gradient(180deg, #121212 0%,
+      rgba(18, 18, 18, 0) 100%) !important;
+  border-radius: 0.375rem !important;
+}
+
+.team-overly {
+  background: rgba(18, 18, 18, 0.7) !important;
+  border-radius: 0.375rem;
+}
+
+.why-card {
+  display: grid;
+  grid-template-areas: "left center center right";
+  gap: 30px;
+}
+
+.why-left {
+  grid-area: left;
+}
+
+.why-center {
+  grid-area: center;
+}
+
+.why-right {
+  grid-area: right;
+}
+
+@media (max-width: 576px) {
+  .why-card {
+    display: grid;
+    grid-template-areas: "center" "left" "right";
+    gap: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .why-card {
+    display: grid;
+    grid-template-areas: "center" "left" "right";
+    gap: 30px;
+  }
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
